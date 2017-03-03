@@ -1,0 +1,57 @@
+.scheme {
+    &-icons {
+        counter-reset: scheme-icons;
+
+        figure {
+            width: 100px;
+            height: 100px;
+            margin: 0;
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px;
+            border: 3px solid $yellow;
+            position: relative;
+            text-align: center;
+            line-height: 90px;
+            margin-bottom: 15px;
+
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                height: 50px;   
+            }
+
+            &:before {
+                counter-increment: scheme-icons;
+                content: counter(scheme-icons);
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                background-color: $yellow;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                font-size: 19px;
+                font-weight: 900;
+                color: #ae6b1d;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.04em;
+        }
+    }
+
+    .slogan {
+        font-size: 20px;
+        padding: 50px 0;
+    }
+}

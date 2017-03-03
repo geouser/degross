@@ -3,7 +3,7 @@
     display: block;
     width: 280px;
     margin: 0 auto;
-    height: 50px;
+    height: 47px;
     background-color: $yellow;
     font-weight: bold;
     border-radius: 6px;
@@ -13,10 +13,15 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    margin-bottom: 3px;
 
     &.light {
         height: 55px;
         background-color: $yellow-light;
+    }
+
+    &.full {
+        width: 100%;
     }
 
     -webkit-box-shadow: 0px 3px 0px 0px rgba(236, 182, 25, 1);
@@ -54,4 +59,52 @@ input[type=email] {
 .form-group {
     display: block;
     width: 100%;
+}
+
+
+.order-form {
+    width: 970px;
+    display: block;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    color: #fff;
+    box-shadow: 0px 0px 60px 0px rgba(17, 17, 17, 0.15); 
+
+    form {
+        @include flex($alignI:center);
+        margin: 0 -7px;
+
+        .form-group {
+            width: 33.33%;
+            padding: 0 7px;
+        }
+
+        input {
+            height: 50px;
+        }
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 30px;
+    }
+
+    .order-offer {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 30px;
+        margin-bottom: 20px;
+
+        span {
+            color: $yellow;
+            font-weight: 900;
+        }
+    }
 }
