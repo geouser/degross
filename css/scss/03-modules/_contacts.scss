@@ -1,0 +1,13 @@
+.contacts {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    @extend %clearfix;
+    padding: 75px 0;
+
+    .form {
+        width: 670px;
+        float: right;
+        color: #fff;
+    }
+}
