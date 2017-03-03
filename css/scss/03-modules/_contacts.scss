@@ -6,8 +6,50 @@
     padding: 75px 0;
 
     .form {
-        width: 670px;
+        width: 50%;
         float: right;
         color: #fff;
+
+        &-label {
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 40px;
+            letter-spacing: 0.04em;
+            margin-bottom: 40px;
+
+            span {
+                color: $yellow;
+                text-transform: uppercase;
+                font-size: 26px;
+            }
+        }
+
+
+        form {
+            width: 100%;
+            @include flex($alignI: center, $justify: center);
+            margin: 0 -5px;
+            margin-bottom: 40px;
+
+            .form-group {
+                width: 50%;
+                padding: 0 5px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .questions-title {
+            font-size: 30px;
+            color: $yellow-light;
+            text-transform: uppercase;
+            line-height: 36px;
+
+            & ~ p {
+                font-size: 20px;
+                line-height: 36px;
+            }
+        }
+
+
     }
 }
