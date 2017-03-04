@@ -216,9 +216,14 @@
                 border-radius: 10px;
                 border: 2px solid #fec41d;
                 text-align: center;
-                line-height: 70px;
+                line-height: 63px;
                 display: inline-block;
                 vertical-align: middle;
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 35px;
+                }
             }
             span {
                 padding-left: 30px;
