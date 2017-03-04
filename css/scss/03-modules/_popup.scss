@@ -1,0 +1,34 @@
+.popup {
+    width: 370px;
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 40px;
+
+    .form {
+        padding: 0;
+        width: auto;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .form span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .mfp-close {
+        width: 20px;
+        height: 20px;
+        border-radius: 1px;
+        border: 1px solid #F5F6F6;
+        line-height: 20px;
+        top: 10px;
+        right: 10px;
+        font-weight: 100;
+        color: #8C979B;
+        font-family: Arial;
+        font-size: 24px;
+    }
+}
