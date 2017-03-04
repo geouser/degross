@@ -21,6 +21,12 @@ h1 {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .1px;
+  i {
+    font-weight: 700;
+    font-style: normal;
+    display: inline;
+    margin-left: -12px;
+  }
 }
 h2 {
   font-size: 36px;
