@@ -53,21 +53,26 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                 ACTIVATE MENU ITEM OVER CURRENT SECTION
     ---------------------------*/
-    var $sections = $('section');
+    var $sections = $('.anchor-point');
     $(window).scroll(function(){
         var currentScroll = $(this).scrollTop();
         var $currentSection;
         var windowHalf = $(window).height() / 2;
         
+
         $sections.each(function(){
           var divPosition = $(this).offset().top - windowHalf;
           
           if( divPosition - 1 < currentScroll ){
             $currentSection = $(this);
           }
-        var id = $currentSection.attr('id');
-          $('a').removeClass('active');
-          $("[href=#"+id+"]").addClass('active');
+          if ($currentSection) {
+             var id = $currentSection.attr('id');
+              $('a').removeClass('active');
+              $("[href=#"+id+"]").addClass('active');
+          } else {
+                $('a').removeClass('active');
+          }
         })
     });
 
@@ -118,20 +123,12 @@ jQuery(document).ready(function($) {
 
     $('.works-slider').slick({
         arrows: true,
+        dots: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 600,
+              breakpoint: 700,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2

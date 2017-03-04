@@ -8,6 +8,10 @@
             background-size: cover;
     @include flex($direction: column, $justify: flex-end);
     color: #FFF;
+    @media (max-width: 900px) {
+        height: auto;
+        padding: 80px 0 60px;
+    }
     .wrapper {
         position: relative;
     }
@@ -16,6 +20,13 @@
         @include flex($alignI: flex-start);
         position: relative;
         bottom: -40px;
+        @media (max-width: 900px) {
+             display: block;
+             position: static;
+        }
+        @media (max-width: 500px) {
+            
+        }
     }
     .border-block {
         width: 470px;
@@ -27,25 +38,50 @@
             -ms-transform: translateY(50%);
              -o-transform: translateY(50%);
                 transform: translateY(50%);
+        @media (max-width: 1100px) {
+            left: 100px;
+        }
+        @media (max-width: 1000px) {
+            left: 40px;
+        }
+        @media (max-width: 900px) {
+            display: none;
+        }
     }
     .form {
         background-color: #FFF;
+        @media (max-width: 900px) {
+            display: block;
+            margin: 0 auto;
+        }
     }
 }
 
 .icons-text-list {
     list-style-type: none;
     text-align: left;
+    @media (max-width: 900px) {
+        display: block;
+        width: 415px;
+        max-width: 100%;
+        margin: 0px auto 40px;
+    }
     li {
         display: block;
         margin-bottom: 22px;
         letter-spacing: .6px;
+        @media (max-width: 500px) {
+            margin-bottom: 15px;
+        }
         img {
             display: inline-block;
             vertical-align: middle;
             margin-right: 18px;
             position: relative;
             top: -3px;
+            @media (max-width: 500px) {
+                display: none;
+            }
         }
         span {
             color: $yellow-light;
@@ -58,6 +94,10 @@
     padding: 40px 35px;
     color: $text;
     box-shadow: 0px 0px 60px 0px rgba(17, 17, 17, 0.15);
+    max-width: 100%;
+    @media (max-width: 500px) {
+        padding: 30px 15px;
+    }
     input {
         margin-bottom: 7px;
     }
@@ -65,10 +105,22 @@
         margin-bottom: 20px;
         font-size: 18px;
         line-height: 24px;
+        @media (max-width: 900px) {
+            font-size: 18px;
+        }
+        @media (max-width: 600px) {
+            font-size: 16px;
+        }
         span {
             font-weight: 900;
             font-size: 28px;
             text-transform: uppercase;
+            @media (max-width: 900px) {
+                font-size: 24px;
+            }
+            @media (max-width: 600px) {
+                font-size: 20px;
+            }
         }
     }
     div {
@@ -89,6 +141,9 @@
             background-size: cover;
     -webkit-box-shadow: 0 0 60px rgba(0,0,0,.15);
         box-shadow: 0 0 60px rgba(0,0,0,.15);
+    @media (max-width: 1000px) {
+        padding: 10px;
+    }
     > div {
         background-color: #FFF;
         font-size: 20px;
@@ -112,13 +167,30 @@
         -webkit-flex-wrap: nowrap;
             -ms-flex-wrap: nowrap;
                 flex-wrap: nowrap;
+        @media (max-width: 1000px) {
+            display: block;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
         div {
             width: 50%;
             &:nth-of-type(2) {
                 text-align: right;
+                @media (max-width: 1000px) {
+                    text-align: center;
+                    margin-top: 20px;
+                }
             }
             .button {
                 display: inline;
+                max-width: 100%;
+            }
+            @media (max-width: 1000px) {
+                width: 100%;
+                text-align: center;
             }
         }
     }
@@ -141,6 +213,11 @@
         display: block;
         margin: 50px auto 0;
     }
+    .flex {
+        @media (max-width: 1000px) {
+            display: block;
+        }
+    }
 }
 .why_list,
 .advantages_list {
@@ -156,11 +233,25 @@
     ul {
         list-style-type: none;
     }
+    @media (max-width: 1200px) {
+        font-size: 14px;
+    }
+    @media (max-width: 1000px) {
+         width: 500px;
+         max-width: 100%;
+         margin: 0 auto 40px;
+    }
 }
 
 .why_list {
     padding-right: 130px;
     text-align: right;
+    @media (max-width: 1200px) {
+        padding-right: 40px;
+    }
+    @media (max-width: 1000px) {
+        padding-right: 6px;
+    }
     ul {
         li {
             display: block;
@@ -168,9 +259,14 @@
             margin-bottom: 28px;
             border: 4px solid #F7F7F7;
             position: relative;
-            font-size: 16px;
             line-height: 24px;
             font-weight: 100;
+            @media (max-width: 1200px) {
+                line-height: 1.4;
+            }
+            @media (max-width: 1000px) {
+                padding: 14px 20px;
+            }
             &:after {
                 display: block;
                 content: "";
@@ -201,15 +297,31 @@
             display: block;
             margin-bottom: 30px;
             position: relative;
-            font-size: 16px;
             line-height: 24px;
             font-weight: 100;
             min-height: 80px;
+            @media (max-width: 1200px) {
+                line-height: 1.4;
+            }
+            @media (max-width: 1200px) {
+                margin-bottom: 20px;
+            }
+            @media (max-width: 1000px) {
+                br {
+                    display: none;
+                }
+            }
             &:nth-child(4) {
                 margin-bottom: 40px;
+                @media (max-width: 1200px) {
+                    margin-bottom: 20px;
+                }
             }
             &:nth-child(5) {
                 margin-bottom: 38px;
+                @media (max-width: 1200px) {
+                    margin-bottom: 20px;
+                }
             }
             &:last-child {
                 margin-bottom: 0;
@@ -225,10 +337,18 @@
                 line-height: 63px;
                 display: inline-block;
                 vertical-align: middle;
+                @media (max-width: 600px) {
+                    width: 50px;
+                    height: 50px;
+                    line-height: 43px;
+                }
                 img {
                     display: inline-block;
                     vertical-align: middle;
                     height: 35px;
+                    @media (max-width: 600px) {
+                        height: 25px;
+                    }
                 }
             }
             span {
@@ -236,6 +356,9 @@
                 display: inline-block;
                 vertical-align: middle;
                 width: calc(100% - 72px);
+                @media (max-width: 1200px) {
+                    padding-left: 15px;
+                }
             }
         }
     }
@@ -252,6 +375,9 @@
             background-size: cover;
     position: relative;
     padding-bottom: 200px;
+    @media (max-width: 1000px) {
+        padding-bottom: 40px;
+    }
     .order {
         position: absolute;
         bottom: 0;
@@ -263,15 +389,42 @@
             -ms-transform: translateY(50%);
              -o-transform: translateY(50%);
                 transform: translateY(50%);
+        @media (max-width: 1000px) {
+            position: static;
+            margin-top: 40px;
+            -webkit-transform: none;
+               -moz-transform: none;
+                -ms-transform: none;
+                 -o-transform: none;
+                    transform: none;
+        }
     }
 }
 .budgets {
     @include flex($alignI: flex-start);
+    @media (max-width: 760px) {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-justify-content: space-around;
+                justify-content: space-around;
+    }
 }
 
 .budget {
     width: 31.5%;
     background-color: #FFF;
+    @media (max-width: 900px) {
+        width: 32.5%;
+    }
+    @media (max-width: 760px) {
+        width: 350px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
     &__img {
         display: block;
         width: 100%;
@@ -287,6 +440,9 @@
     }
     &__info {
         padding: 22px 25px 40px;
+        @media (max-width: 1000px) {
+            padding: 15px 10px 40px;
+        }
         h3 {
             font-size: 23px;
             font-weight: 100;
@@ -294,11 +450,29 @@
             strong {
                 font-weight: 700;
             }
+            @media (max-width: 1200px) {
+                font-size: 22px;
+            }
+            @media (max-width: 1000px) {
+                font-size: 18px;
+            }
+            @media (max-width: 760px) {
+                font-size: 20px;
+            }
         }
         &__price {
             font-size: 26px;
             color: $yellow;
             font-weight: 900;
+            @media (max-width: 1200px) {
+                font-size: 24px;
+            }
+            @media (max-width: 1000px) {
+                font-size: 19px;
+            }
+            @media (max-width: 760px) {
+                font-size: 21px;
+            }
         }
         hr {
             border: none;
@@ -307,6 +481,9 @@
             width: 140px;
             height: 1px;
             background-color: #dddddd;
+            @media (max-width: 1000px) {
+                margin: 15px auto;
+            }
         }
     }
     ul {
@@ -359,6 +536,16 @@
     font-weight: 700;
     max-width: 80%;
     margin: 0 auto;
+    @media (max-width: 1200px) {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+      @media (max-width: 900px) {
+        font-size: 16px;
+      }
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
 }
 .works-slider__slide {
     padding: 15px;
@@ -413,6 +600,18 @@
     span {
         font-weight: 700;
     }
+     @media (max-width: 1200px) {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+      @media (max-width: 900px) {
+        font-size: 16px;
+        padding: 14px 20px;
+      }
+      @media (max-width: 600px) {
+        font-size: 14px;
+        padding: 12px 10px;
+      }
 }
 .work-price + .subtitle {
     margin-top: 10px;
