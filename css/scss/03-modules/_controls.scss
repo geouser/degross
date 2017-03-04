@@ -106,6 +106,7 @@ input[type=email] {
         font-size: 28px;
         font-weight: bold;
         line-height: 30px;
+        letter-spacing: 0.04em;
     }
 
     .order-offer {
@@ -113,6 +114,7 @@ input[type=email] {
         font-weight: bold;
         line-height: 30px;
         margin-bottom: 20px;
+        letter-spacing: 0.02em;
 
         span {
             color: $yellow;
