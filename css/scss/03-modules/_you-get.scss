@@ -8,6 +8,12 @@
     .flex-row {
         margin-bottom: -30px;
         counter-reset: get-features;
+
+        @media (max-width: 991px) {
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
     }
 
     &-feature {
@@ -17,6 +23,18 @@
         font-size: 16px;
         margin-bottom: 80px;
         position: relative;
+
+        @media (max-width: 991px) {
+            letter-spacing: normal;
+            line-height: normal;
+            font-size: 18px;
+            width: 50%;
+        }
+
+        @media (max-width: 550px) {
+            font-size: 20px;
+            width: 100%;
+        }
 
         &:before {
             counter-increment: get-features;
@@ -29,6 +47,11 @@
             top: 0;
             left: 0;
             line-height: 110px;
+
+            @media (max-width: 550px) {
+                left: auto;
+                right: 0;
+            }
         }
 
         h3 {

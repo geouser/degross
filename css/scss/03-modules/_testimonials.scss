@@ -6,9 +6,19 @@
         display: block;
         margin: 0 auto 80px;
 
+        @media (max-width: 1300px) {
+            width: 100%;
+        }
+
+
+
         .testimonial {
             padding: 0 130px;
             text-align: center;
+
+            @media (max-width: 991px) {
+                padding: 0 15px;
+            }
 
             &-icon {
                 width: 130px;
@@ -23,6 +33,11 @@
                 letter-spacing: 0.06em;
                 font-weight: normal;
                 margin-bottom: 25px;
+
+                @media (max-width: 600px) {
+                    letter-spacing: normal;
+                    line-height: normal;
+                }
             }
 
             &-author {
@@ -72,6 +87,10 @@
         background-image: url(../images/arrow-left.svg);
         background-repeat: no-repeat;
         background-position: 50% 50%;
+
+        @media (max-width: 1300px) {
+            left: 0;
+        }
     }
 
     &.slick-next {
@@ -79,5 +98,15 @@
         background-image: url(../images/arrow-right.svg);
         background-repeat: no-repeat;
         background-position: 50% 50%;
+
+        @media (max-width: 1300px) {
+            right: 0;
+        }
+    }
+}
+
+.slick-slider {
+    @media (max-width: 1300px) {
+        padding: 0 40px;
     }
 }

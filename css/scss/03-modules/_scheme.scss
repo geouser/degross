@@ -2,6 +2,25 @@
     &-icons {
         counter-reset: scheme-icons;
 
+        @media (max-width: 991px) {
+            margin-bottom: -50px;
+        }
+
+        .col-2 {
+            @media (max-width: 991px) {
+                width: 33.33%;
+                margin-bottom: 50px;
+            }
+
+            @media (max-width: 600px) {
+                width: 50%;
+            }
+
+            @media (max-width: 380px) {
+                width: 100%;
+            }
+        }
+
         figure {
             width: 100px;
             height: 100px;
@@ -47,6 +66,16 @@
             font-size: 14px;
             line-height: 22px;
             letter-spacing: 0.04em;
+
+            @media (max-width: 1200px) {
+                font-size: 14px;
+                letter-spacing: normal;
+                line-height: normal;
+            }
+
+            @media (max-width: 380px) {
+                font-size: 16px;
+            }
         }
     }
 

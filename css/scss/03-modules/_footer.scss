@@ -1,10 +1,28 @@
 .footer {
     padding: 8px 0;
 
+    @media (max-width: 500px) {
+        padding: 20px 0;
+    }
+
+    & .wrapper > .flex-row > .col-6 {
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
+    }
+
     &-logo {
         display: inline-block;
         vertical-align: middle;
         width: 200px;
+
+        @media (max-width: 767px) {
+           width: 150px;
+        }
+
+        @media (max-width: 500px) {
+            width: 100px;
+        }
 
         img {
             display: block;
@@ -19,12 +37,48 @@
         padding-left: 18px;
         line-height: 22px;
         letter-spacing: 0.04em;
+
+        @media (max-width: 767px) {
+            line-height: normal;
+            font-size: 14px;
+            padding-left: 5px;
+            letter-spacing: normal;
+        }
+
+        @media (max-width: 500px) {
+            width: 180px;
+
+            br {
+                display: none;
+            }
+        }
     }
 
     &-contacts {
         text-align: right;
         line-height: 22px;
         letter-spacing: 0.04em;
+
+        @media (max-width: 1200px) {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+            letter-spacing: normal;
+            line-height: normal;
+        }
+
+        @media (max-width: 500px) {
+            .col-6 {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 
     &-phone {

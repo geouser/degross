@@ -90,6 +90,15 @@ input[type=email] {
     background-position: 50% 50%;
     color: #fff;
     box-shadow: 0px 0px 60px 0px rgba(17, 17, 17, 0.15); 
+
+    @media (max-width: 767px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: -webkit-calc(100% + 20px);
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+        max-width: none;
+    }
     &--white {
         color: $text;
     }
@@ -97,9 +106,23 @@ input[type=email] {
         @include flex($alignI:center);
         margin: 0 -7px;
 
+        @media (max-width: 767px) {
+            width: 280px;
+            display: block;
+            margin: 0 auto;
+        }
+
         .form-group {
             width: 33.33%;
             padding: 0 7px;
+
+            @media (max-width: 767px) {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
         }
 
         input {

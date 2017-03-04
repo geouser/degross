@@ -115,6 +115,7 @@
             font-weight: 900;
             font-size: 28px;
             text-transform: uppercase;
+            display: block;
             @media (max-width: 900px) {
                 font-size: 24px;
             }
@@ -204,9 +205,18 @@
 
 
 
-// WHY (Second section)
+/*WHY (Second section)*/
 .why {
     padding-top: 170px;
+
+    @media (max-width: 900px) {
+        padding-top: 60px;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 50px;
+    }
+
     .border-block {
         width: 770px;
         max-width: 100%;
@@ -266,6 +276,7 @@
             }
             @media (max-width: 1000px) {
                 padding: 14px 20px;
+                text-align: left;
             }
             &:after {
                 display: block;
@@ -281,6 +292,11 @@
                 -webkit-background-size: 100% 100%;
                      -o-background-size: 100% 100%;
                         background-size: 100% 100%;
+
+                @media (max-width: 1000px) {
+                    right: auto;
+                    left: -15px;
+                }
             }
             &:last-child {
                 margin-bottom: 0;
@@ -512,6 +528,10 @@
 // OUR WORKS
 .our-works {
     padding-top: 170px;
+
+    @media (max-width: 1000px) {
+        padding-top: 0;
+    }
     hr {
         border: none;
         display: block;
@@ -524,6 +544,12 @@
     .section-title,
     .order-form {
         margin-top: 75px;
+    }
+
+    @media (max-width: 767px) {
+        .section-title {
+            margin-top: 50px;
+        }
     }
 }
 

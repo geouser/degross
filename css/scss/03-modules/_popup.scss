@@ -6,6 +6,12 @@
     text-align: center;
     padding: 40px;
 
+    @media (max-width: 390px) {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .form {
         padding: 0;
         width: auto;
