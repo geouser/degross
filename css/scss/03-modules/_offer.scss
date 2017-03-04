@@ -27,8 +27,6 @@
             -ms-transform: translateY(50%);
              -o-transform: translateY(50%);
                 transform: translateY(50%);
-        -webkit-box-shadow: 0 0 60px rgba(0,0,0,.15);
-                box-shadow: 0 0 60px rgba(0,0,0,.15);
     }
 }
 
@@ -87,7 +85,9 @@
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
-    div {
+    -webkit-box-shadow: 0 0 60px rgba(0,0,0,.15);
+        box-shadow: 0 0 60px rgba(0,0,0,.15);
+    > div {
         background-color: #FFF;
         font-size: 20px;
         line-height: 30px;
@@ -98,6 +98,139 @@
         span {
             color: $yellow;
             display: block;
+        }
+
+    }
+    .flex {
+        padding-left: 25px;
+        padding-right: 25px;
+        text-align: left;
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+        div {
+            width: 50%;
+            &:nth-of-type(2) {
+                text-align: right;
+            }
+            .button {
+                display: inline;
+            }
+        }
+    }
+}
+
+.flex {
+    @include flex($alignI: flex-start);
+}
+
+
+.why {
+    padding-top: 170px;
+    .border-block {
+        width: 770px;
+        max-width: 100%;
+        display: block;
+        margin: 50px auto 0;
+    }
+}
+.why_list,
+.advantages_list {
+    width: 50%;
+    text-align: left;
+    > span {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 45px;
+    }
+    ul {
+        list-style-type: none;
+    }
+}
+
+.why_list {
+    padding-right: 130px;
+    text-align: right;
+    ul {
+        li {
+            display: block;
+            padding: 18px 40px;
+            margin-bottom: 28px;
+            border: 4px solid #F7F7F7;
+            position: relative;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 100;
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 0;
+                right: -15px;
+                bottom: 0;
+                margin: auto;
+                width: 28px;
+                height: 23px;
+                background-image: url("../images/danger.png");
+                -webkit-background-size: 100% 100%;
+                     -o-background-size: 100% 100%;
+                        background-size: 100% 100%;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+.advantages_list {
+    ul {
+        padding-top: 2px;
+        li {
+            display: block;
+            margin-bottom: 30px;
+            position: relative;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 100;
+            min-height: 80px;
+            &:nth-child(4) {
+                margin-bottom: 40px;
+            }
+            &:nth-child(5) {
+                margin-bottom: 38px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            i {
+                width: 70px;
+                height: 70px;
+                margin: 0;
+                display: block;
+                border-radius: 10px;
+                border: 2px solid #fec41d;
+                text-align: center;
+                line-height: 63px;
+                display: inline-block;
+                vertical-align: middle;
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 35px;
+                }
+            }
+            span {
+                padding-left: 30px;
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(100% - 72px);
+            }
         }
     }
 }
