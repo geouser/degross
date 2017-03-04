@@ -175,7 +175,7 @@
                 margin: auto;
                 width: 28px;
                 height: 23px;
-                background-image: url("../images/danger.png");
+                background-image: url("../images/danger-icon.svg");
                 -webkit-background-size: 100% 100%;
                      -o-background-size: 100% 100%;
                         background-size: 100% 100%;
@@ -230,6 +230,92 @@
                 display: inline-block;
                 vertical-align: middle;
                 width: calc(100% - 72px);
+            }
+        }
+    }
+}
+
+
+.budget-section {
+    background-image: url("../images/budget-section.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    position: relative;
+    padding-bottom: 200px;
+    .order {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right : 0;
+        margin: auto;
+        -webkit-transform: translateY(50%);
+           -moz-transform: translateY(50%);
+            -ms-transform: translateY(50%);
+             -o-transform: translateY(50%);
+                transform: translateY(50%);
+    }
+}
+.budgets {
+    @include flex($alignI: flex-start);
+}
+
+.budget {
+    width: 31.5%;
+    background-color: #FFF;
+    &__img {
+        display: block;
+        width: 100%;
+        background-position: 50% 50%;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+        &:after {
+            display: block;
+            content: "";
+            padding-top: 55%;
+        }
+    }
+    &__info {
+        padding: 22px 25px 40px;
+        h3 {
+            font-size: 23px;
+            font-weight: 100;
+            margin-bottom: 14px;
+            strong {
+                font-weight: 700;
+            }
+        }
+        &__price {
+            font-size: 26px;
+            color: $yellow;
+            font-weight: 900;
+        }
+        hr {
+            border: none;
+            display: block;
+            margin: 35px auto;
+            width: 140px;
+            height: 1px;
+            background-color: #dddddd;
+        }
+    }
+    ul {
+        list-style-type: none;
+        text-align: left;
+        span {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        li {
+            display: block;
+            margin-bottom: 14px;
+            line-height: 20px;
+            font-size: 14px;
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     }
