@@ -1,0 +1,46 @@
+.you-get {
+    color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    
+
+    .flex-row {
+        margin-bottom: -30px;
+        counter-reset: get-features;
+    }
+
+    &-feature {
+        text-align: left;
+        line-height: 24px;
+        letter-spacing: 0.06em;
+        font-size: 16px;
+        margin-bottom: 80px;
+        position: relative;
+
+        &:before {
+            counter-increment: get-features;
+            content: counter(get-features);
+            font-size: 160px;
+            font-weight: 900;
+            color: #fff;
+            opacity: 0.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 110px;
+        }
+
+        h3 {
+            color: $yellow;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: inherit;
+        }
+
+        p {
+            font-weight: normal;
+        }
+
+    }
+}
