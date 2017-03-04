@@ -334,9 +334,32 @@
 
 // OUR WORKS
 .our-works {
-    padding-top: 240px;
+    padding-top: 170px;
+    hr {
+        border: none;
+        display: block;
+        margin: 75px auto 0;
+        width: 970px;
+        height: 1px;
+        max-width: 100%;
+        background-color: #dddddd;
+    }
+    .section-title,
+    .order-form {
+        margin-top: 75px;
+    }
 }
 
+.works-slider {
+    margin-bottom: 40px;
+}
+.works-slider + p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    max-width: 80%;
+    margin: 0 auto;
+}
 .works-slider__slide {
     padding: 15px;
     background-color: #fff;
@@ -359,6 +382,12 @@
             bottom: 20px;
             background-color: $yellow;
             @include transition(all, .2s);
+            background-image: url("../images/zoom-icon.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-background-size: 75px auto;
+                 -o-background-size: 75px auto;
+                    background-size: 75px auto;
         }
         &:after {
             content: "";
@@ -369,4 +398,22 @@
             opacity: .8;
         }
     }
+}
+
+.work-price {
+    border-radius: 10px;
+    border: 1px solid #fec41d;
+    text-align: center;
+    padding: 18px 30px;
+    margin: 18px auto 0;
+    width: 770px;
+    max-width: 100%;
+    font-size: 20px;
+    font-weight: 100;
+    span {
+        font-weight: 700;
+    }
+}
+.work-price + .subtitle {
+    margin-top: 10px;
 }
