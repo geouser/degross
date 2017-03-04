@@ -129,6 +129,10 @@
 }
 
 
+
+
+
+// WHY (Second section)
 .why {
     padding-top: 170px;
     .border-block {
@@ -238,6 +242,8 @@
 }
 
 
+
+// BUDGETS
 .budget-section {
     background-image: url("../images/budget-section.jpg");
     background-repeat: no-repeat;
@@ -319,6 +325,48 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+}
+
+
+
+
+// OUR WORKS
+.our-works {
+    padding-top: 240px;
+}
+
+.works-slider__slide {
+    padding: 15px;
+    background-color: #fff;
+    a {
+        display: block;
+        background-color: $text;
+        position: relative;
+        background-position: 50% 50%;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+        &:before {
+            content: "";
+            display: block;
+            opacity: 0;
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            top: 20px;
+            bottom: 20px;
+            background-color: $yellow;
+            @include transition(all, .2s);
+        }
+        &:after {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+        &:hover:before {
+            opacity: .8;
         }
     }
 }
