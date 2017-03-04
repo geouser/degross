@@ -8,6 +8,10 @@
             background-size: cover;
     @include flex($direction: column, $justify: flex-end);
     color: #FFF;
+    @media (max-width: 900px) {
+        height: auto;
+        padding: 80px 0 60px;
+    }
     .wrapper {
         position: relative;
     }
@@ -16,6 +20,13 @@
         @include flex($alignI: flex-start);
         position: relative;
         bottom: -40px;
+        @media (max-width: 900px) {
+             display: block;
+             position: static;
+        }
+        @media (max-width: 500px) {
+            
+        }
     }
     .border-block {
         width: 470px;
@@ -27,25 +38,44 @@
             -ms-transform: translateY(50%);
              -o-transform: translateY(50%);
                 transform: translateY(50%);
+        @media (max-width: 900px) {
+            display: none;
+        }
     }
     .form {
         background-color: #FFF;
+        @media (max-width: 900px) {
+            display: block;
+            margin: 0 auto;
+        }
     }
 }
 
 .icons-text-list {
     list-style-type: none;
     text-align: left;
+    @media (max-width: 900px) {
+        display: block;
+        width: 415px;
+        max-width: 100%;
+        margin: 0px auto 40px;
+    }
     li {
         display: block;
         margin-bottom: 22px;
         letter-spacing: .6px;
+        @media (max-width: 500px) {
+            margin-bottom: 15px;
+        }
         img {
             display: inline-block;
             vertical-align: middle;
             margin-right: 18px;
             position: relative;
             top: -3px;
+            @media (max-width: 500px) {
+                display: none;
+            }
         }
         span {
             color: $yellow;
@@ -58,6 +88,10 @@
     padding: 40px 35px;
     color: $text;
     box-shadow: 0px 0px 60px 0px rgba(17, 17, 17, 0.15);
+    max-width: 100%;
+    @media (max-width: 500px) {
+        padding: 30px 15px;
+    }
     input {
         margin-bottom: 7px;
     }
@@ -65,10 +99,22 @@
         margin-bottom: 20px;
         font-size: 18px;
         line-height: 24px;
+        @media (max-width: 900px) {
+            font-size: 18px;
+        }
+        @media (max-width: 600px) {
+            font-size: 16px;
+        }
         span {
             font-weight: 900;
             font-size: 28px;
             text-transform: uppercase;
+            @media (max-width: 900px) {
+                font-size: 24px;
+            }
+            @media (max-width: 600px) {
+                font-size: 20px;
+            }
         }
     }
     div {
