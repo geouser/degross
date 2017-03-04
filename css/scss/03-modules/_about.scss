@@ -1,0 +1,52 @@
+.about-us {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    color: #fff;
+    padding-bottom: 100px;
+    position: relative;
+
+    .about-icons {
+        figure {
+            border-width: 2px;
+            width: 70px;
+            height: 70px;
+            line-height: 60px;
+            border-radius: 10px;
+
+            img {
+                height: 35px;
+            }
+                
+            &:before {
+                display: none;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .slogan {
+        font-size: 20px;
+        padding: 50px 0;
+        line-height: 30px;
+    }
+
+    .border-block {
+        width: 770px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+        -o-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+    }
+}
+
+.about-icons {
+    @extend .scheme-icons;
+}
