@@ -28,6 +28,9 @@
              -o-transform: translateY(50%);
                 transform: translateY(50%);
     }
+    .form {
+        background-color: #FFF;
+    }
 }
 
 .icons-text-list {
@@ -53,7 +56,6 @@
 .form {
     width: 370px;
     padding: 40px 35px;
-    background-color: #FFF;
     color: $text;
     box-shadow: 0px 0px 60px 0px rgba(17, 17, 17, 0.15);
     input {
