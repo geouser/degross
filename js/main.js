@@ -86,6 +86,15 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Sliders
+    ---------------------------*/
+    $('.testimonials-slider').slick({
+        arrows: true,
+        dots: false
+    })
+
+
 
     /*---------------------------
                                   Magnific popup
