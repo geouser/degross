@@ -1,23 +1,95 @@
          
 .mainHeader {
-    @include position(absolute, 0, auto, auto, 0);
+    @include position(fixed, 0, 0, auto, 0);
     @include transition(all, .4s);
-    
-        /*.................media.............*/
-        @include m800 {
-            @include position(fixed, 0, auto, auto, -100%);
+    z-index: 100;
+    &__top {
+        background-color: #FFF;
+        height: 90px;
+        @include transition(all, .2s);
+        .wrapper {
+            height: 100%;
+            @include flex();
         }
-        /*.............end media..............*/
+    }
+    &__bottom {
+        padding: 25px 0;
+        @include transition(all, .2s);
+    }
+    &.hasScrolled {
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+                box-shadow: 0 0 10px rgba(0,0,0,.4);
+        .mainHeader__top {
+            height: 70px;
+        }
+        .mainHeader__bottom {
+            padding: 10px 0;
+            background-color: $text;
+        }
+        .logo {
+            img {
+                width: 160px;
+            }
+        }
+    }
 }
 
+.logo {
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 200px;
+        max-height: 100%;
+        @include transition(all, .2s);
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 290px;
+        font-size: 16px;
+        font-weight: 100;
+        text-align: left;
+        color: $text;
+        margin-left: 15px;
+    }
+}
+
+.order-call {
+    text-align: right;
+    color: $text;
+    a {
+        font-weight: 900;
+        font-size: 22px;
+        display: block;
+    }
+    span {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 6px;
+        border-bottom: 1px dashed $text;
+        padding-bottom: 2px;
+    }
+}
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
-            /*.................media.............*/
-            @include m800 { 
+    width: 100%;
+    ul {
+        list-style-type: none;
+        width: 100%;
+        @include flex();
+        li {
+            a {
+                color: #FFF;
+                @include transition(all, .2s);
+                &:hover {
+                    color: $yellow;
+                }
             }
-            /*.............end media.............*/
+        }
+    }
 }
 
 
